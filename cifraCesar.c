@@ -3,7 +3,7 @@
 #include <string.h>
 
 // Cifra uma letra utilizando o deslocamento informado
- char cifra_letra(char letra, int deslocamento) {
+char cifra_letra(char letra, int deslocamento) {
     if (letra >= 'a' && letra <= 'z') {
         return (letra - 'a' + deslocamento) % 26 + 'a';
     } else if (letra >= 'A' && letra <= 'Z') {
