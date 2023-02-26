@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <string.h>
 
-// Cifra uma letra utilizando o deslocamento dado
+// Cifra uma letra utilizando o deslocamento informado
  char cifra_letra(char letra, int deslocamento) {
     if (letra >= 'a' && letra <= 'z') {
         return (letra - 'a' + deslocamento) % 26 + 'a';
@@ -12,7 +12,7 @@
     return letra; // não cifra caracteres que não são letras
 }
 
-// Cifra o texto dado utilizando o deslocamento dado
+// Cifra o texto dado utilizando o deslocamento informado
 void cifra_cesar(char *texto, int deslocamento) {
     for (int i = 0; texto[i] != '\0'; i++) {
         texto[i] = cifra_letra(texto[i], deslocamento);
